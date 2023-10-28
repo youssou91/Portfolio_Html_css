@@ -24,9 +24,18 @@ window.onscroll = () => {
             navLinks.forEach(link => {
                 link.classList.remove('active');
             });
+            // active sections for animationon scroll
+            sec.classList.add('show-animate');
+            
+            
             var activeLink = document.querySelector('nav a[href="#' + id + '"]');
             if (activeLink) activeLink.classList.add('active');
+            // if want to use animation that repeats on scroll use this
+        }else {
+            sec.classList.remove('show-animate');
+
         }
+
     });
     // remose toggle icon and navbar when click navbar lincks (scroll)
     menuIcon.classList.remove('bx-x');
