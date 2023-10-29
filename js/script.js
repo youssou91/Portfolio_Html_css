@@ -35,10 +35,13 @@ window.onscroll = () => {
             sec.classList.remove('show-animate');
 
         }
-
+        
     });
     // remose toggle icon and navbar when click navbar lincks (scroll)
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
-
+    //ANIMATION FOOTER ON SCROLL
+    var footer = document.querySelector('footer');
+    footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= 
+    document.scrollingElement.scrollHeight);
 };
